@@ -1,0 +1,40 @@
+.footer
+    &__buttom
+        padding: 25px 0
+    &__container
+    &__body
+        @media (min-width: $md3 + px)//More 768
+            display: flex
+            justify-content: space-between
+            align-items: center
+    &__copy
+        font-weight: 600
+        line-height: 171%
+        letter-spacing: 0.2px
+        color: $second
+        @media (max-width: $md3 + px) //Less 768
+            text-align: center
+            &:not(:last-child)
+                margin-bottom: 10px
+    &__social
+    
+.social-footer
+    display: flex
+    align-items: center
+    @media (max-width: $md3 + px) //Less 768
+       justify-content: center
+    &__item
+        &:not(:last-child)
+            margin-right: 20px
+        &::before
+            font-size: 24px
+        &_facebook
+            &::before
+                color: #335BF5
+        &_instagram
+            color: #E61F5A
+        &_twitter
+            color: #21A6DF
+        &_youtube
+            color: #E42F08
+            

@@ -1,0 +1,52 @@
+.service
+    margin: -111px 0 0 0
+    position: relative
+    z-index: 2
+    @media (max-width: $md4 + px)//Less 479
+       margin: -35px 0 0 0
+    &__container
+    &__body
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr))
+        grid-gap: 30px
+    &__item
+    
+
+.item-service
+    height: 100%
+    @include adaptiv-value('padding', 35, 20,  1)
+    background: #ffffff
+    box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07)
+    transition: all 0.3s ease 0s
+    @media (any-hover: hover )
+       &:hover
+            background: #0D5C63
+            .item-service__title,.item-service__text
+                color: #FFFFFF
+            .item-service__image
+                &::before     
+                    color: #fff
+    &__image
+        &::before
+            font-size: 48px
+            color: $green
+    &__title
+        font-weight: bold
+        @include adaptiv-value('font-size', 24, 18, 1)
+        line-height: 133%
+        letter-spacing: 0.1px
+    &__text
+        line-height: 143%
+        letter-spacing: 0.2px
+        color: $second
+    &>:not(:last-child)
+        @include adaptiv-value('margin-bottom', 10, 6, 1)
+
+
+.item-service_active
+    background: #0D5C63
+    .item-service__title,.item-service__text
+        color: #FFFFFF
+    .item-service__image
+        &::before     
+            color: #fff

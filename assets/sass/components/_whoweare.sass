@@ -1,0 +1,124 @@
+.whoweare
+    position: relative
+    @include adaptiv-value('padding-top', 100, 40, 1)
+    @include adaptiv-value('padding-bottom  ', 100, 40, 1)
+    background: #ffffff
+    &__container
+        
+    &__header
+        z-index: 3
+        position: relative
+        &:not(:last-child)
+            @include adaptiv-value('margin-bottom', 100, 40, 1)
+        @media (max-width: $md2 + px)//Less 992
+           &:not(:last-child)
+               @include adaptiv-value('margin-bottom', 50, 30, 1)
+    &__body
+        z-index: 3
+        position: relative
+        display: flex
+        align-items: flex-start
+        @media (max-width: $md2 + px)//Less 992
+           flex-direction: column-reverse
+           align-items: stretch
+    &__video
+    &__content  
+    &__image
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+
+
+.video-whoweare
+    flex: 0 0 55%
+    position: relative
+    padding: 0 0 442/1065 * 100% 0
+    ///442-Hight of video  1065-Container
+    @media (max-width: $md2 + px)//Less 992
+        @include adaptiv-value('margin-top', 50, 30, 1)
+        padding: 0 0 315/560 * 100% 0
+        //// 315-height 560-width of video
+        
+    &__btn
+        @include adaptiv-value('width', 100, 60, 1)
+        @include adaptiv-value('height', 100, 60, 1)
+        position: absolute
+        right: calc(50% - 50px)
+        top: 50%
+        transform: translateY(-50%)
+        z-index: 5
+        transition: all 0.3s ease 0s
+
+        background: #0D5C63
+        border-radius: 50%
+
+        display: flex
+        align-items: center
+        justify-content: center
+        @media (max-width: $md3 + px) //Less 768
+            right: calc(50% - 35px)
+        @media (max-width: $md4 + px)//Less 479
+            right: calc(50% - 30px)
+        @media (any-hover: hover )
+            &:hover
+                background: #0e5157
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        &::before
+            @include adaptiv-value('font-size', 30, 20, 1)
+
+                  
+            
+    iframe
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+.content-whoweare
+    @include adaptiv-value('padding-left', 120, 30, 1)
+    flex: 1 1 auto
+    @media (max-width: $md2 + px)//Less 992
+        padding: 0 0 0 0
+    &__top
+        &:not(:last-child)
+            @include adaptiv-value('margin-bottom', 40, 20, 1)
+    &__title
+        @include adaptiv-value('font-size', 40, 20, 1)
+        font-weight: bold
+        line-height: 142%
+        letter-spacing: 0.2px
+        &:not(:last-child)
+            @include adaptiv-value('margin-bottom', 10, 7, 1)
+    &__text
+        line-height: 143%
+        letter-spacing: 0.2px
+        color: $second
+    &__items
+    &__item
+    
+.item-whoweare
+    display: flex   
+    &:not(:last-child)
+        @include adaptiv-value('margin-bottom', 30, 15, 1)
+    &::before
+        color: $orange
+        flex: 0 0 32px
+        font-size: 32px
+        @include adaptiv-value('font-size', 32, 28, 1)
+        padding-right: 20px
+        
+    &__title
+        font-weight: bold
+        @include adaptiv-value('font-size', 16, 14, 1)
+        line-height: 150%
+        letter-spacing: 0.1px
+    &__text
+        line-height: 171%
+        letter-spacing: 0.2px
+        @include adaptiv-value('font-size', 14, 12, 1)
+        color: $second
+
+    

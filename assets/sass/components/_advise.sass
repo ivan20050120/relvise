@@ -1,0 +1,36 @@
+.advise
+    @include adaptiv-value('padding-top', 120, 0, 1)
+    @include adaptiv-value('padding-bottom', 80, 40, 1)
+    &__container
+    &__header
+        &:not(:last-child)
+            @include adaptiv-value('margin-bottom', 45, 35, 1)
+    &__body
+        display: grid
+        gap: 30px
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr))
+    &__item
+
+.item-advise
+    display: flex
+    flex-direction: column
+    height: 100%
+    background: white
+    &__body
+        @include adaptiv-value('padding', 30, 25, 1)
+        flex: 1 1 auto
+    &__title
+        font-weight: bold
+        font-size: 16px
+        line-height: 150%
+        letter-spacing: 0.1px
+        display: block
+        &:not(:last-child)
+            @include adaptiv-value('margin-bottom', 15, 10, 1)
+    &__text
+        line-height: 143%
+        letter-spacing: 0.2px
+        color: $second
+    &__image
+        display: block
+        padding: 0 0 140/230 * 100%  0

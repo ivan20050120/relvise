@@ -1,0 +1,70 @@
+.subscribe
+    position: relative
+    padding-bottom: 20px
+    &:not(:last-child)   
+        margin: 0 0 10px 0
+    &::before
+        content: ''
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        min-height: 77px
+        background: #252B42
+        z-index: -1
+    &__container
+    &__body
+        @include adaptiv-value('padding-top', 30, 18, 1)
+        @include adaptiv-value('padding-bottom', 30, 18, 1)
+        @include adaptiv-value('padding-left', 50, 28, 1)
+        @include adaptiv-value('padding-right', 50, 28, 1)
+        background: #17213C
+        border-radius: 2px
+        @media (min-width: $md2 + px)//More 992
+            margin: 0 30px //side margin
+        @media (min-width: $md3 + px)//More 768                    
+            display: flex
+            align-items: center
+            justify-content: space-between   
+        @media (max-width: $md2 + px)//Less 992
+           margin: 0 -15px
+    &__title
+        @include adaptiv-value('font-size', 24, 18, 1)
+        line-height: 133%
+        letter-spacing: 0.1px
+        font-weight: bold
+        color: #FFFFFF
+        flex: 0 1 50%
+        @media (min-width: $md3 + px)//More 768
+           max-width: 260px 
+        @media (max-width: $md3 + px) //Less 768
+           &:not(:last-child)
+               @include adaptiv-value('margin-bottom', 10, 7, 1)
+    &__form
+        flex: 0 1 50%
+        display: flex
+        align-items: center
+    &__input
+        flex: 1 1 auto
+        width: 100%
+        min-height: 58px
+        padding: 15px
+        background: #F9F9F9
+        border: 1px solid #E6E6E6
+        border-right: none
+        border-radius: 5px 0 0 5px
+    &__button
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        padding: 15px 23px
+        background: $orange
+        border: 1px solid #E6E6E6
+        border-radius: 0px 5px 5px 0px
+        color: white
+        font-weight: 400
+        min-height: 58px
+        min-width: 117px
+        @media (max-width: $md4 + px)//Less 479
+           min-width: 80px

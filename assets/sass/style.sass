@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+
+@import './service/mixins'
+@import 'icons'
+// $maxWidth: 1440
+
+
+$maxWidthContainer: 1065
+//+ 15px
+  
+  
+$md1: $maxWidthContainer + 12
+$md2: 991.98 
+$md3: 767.98
+$md4: 479.98
+
+
+$mainColor: #252B42
+$second: #737373
+$orange: #FF7B47
+$green:  #0D5C63
+
+@import 'ui' 
+@import './components/header' 
+@import './components/main' 
+@import './components/service' 
+@import './components/design' 
+@import './components/advise' 
+@import './components/whoweare' 
+@import './components/client' 
+@import './components/subscribe' 
+@import './components/touch' 
+@import './components/contact' 
+@import './components/footer' 
+@import './components/footer-bottom' 
+
+
+
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  font-family: 'Montserrat', sans-serif
+  font-size: 14px
+  font-weight: 500
+  color: $mainColor
+  transition: all 0.3s ease 0s
+
+
+html,body
+  height: 100%
+  background: #FAFAFA
+
+
+  
+._container
+  max-width: $maxWidthContainer + px
+  padding: 0 15px
+  margin: 0 auto
+
+.wrapper 
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+  
+.page 
+	flex: 1 1 auto;
+
+button
+  border: none
+  cursor: pointer
+
+li
+  list-style: none
+
+a
+  text-decoration: none
+
+input
+  outline: none
+  border: none
+
+
+
